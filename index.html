@@ -68,6 +68,7 @@ layout: base
         <p> <a href="text.html" class="btn btn-ghost">详细了解   </a></p>
       </div>
     </section>
+
     <section class="section--padding-bottom-small">
       <div class="container">
         <div class="row">
@@ -89,36 +90,27 @@ layout: base
           </div>
         </div>
         <div class="row">
-          {%for art in site.posts%}
-          <div class="col-sm-4">
-            <div class="post">
-                <div class="image"><a href="text.html"><img src="img/blog1.jpg" alt="" class="img-responsive"></a></div>
-                <h3><a href="text.html">{{art.title}}</a></h3>
-                <p class="post__intro">{{art.subheading}}</p>
-                <p class="read-more"><a href="text.html" class="btn btn-ghost">{{art.text}}</a></p>
-            </div>
-          </div>
-          {%endfor%}
-         <!--  <div class="col-sm-4">
-            <div class="post">
-              <div class="image"><a href="text.html"><img src="img/blog2.jpg" alt="" class="img-responsive"></a></div>
-              <h3><a href="text.html">Tempor sit amet</a></h3>
-              <p class="post__intro"> Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.</p>
-              <p class="read-more"><a href="text.html" class="btn btn-ghost">Continue reading     </a></p>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="post">
-              <div class="image"><a href="text.html"><img src="img/blog3.jpg" alt="" class="img-responsive"></a></div>
-              <h3><a href="text.html">Vestibulum erat wisi</a></h3>
-              <p class="post__intro">ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-              <p class="read-more"><a href="text.html" class="btn btn-ghost">Continue reading     </a></p>
-            </div>
-          </div> -->
+            {% for art in paginator.posts %}
+              <div class="col-sm-4">
+                <div class="post">
+                    <div class="image"><a href="{{art.url}}"><img src="img/{{art.pic}}" alt="" class="img-responsive"></a></div>
+                    <h3><a href="{{art.url}}">{{art.title}}</a></h3>
+                    <p class="post__intro">{{art.subheading}}</p>
+                    <p class="read-more"><a href="text.html" class="btn btn-ghost">{{art.text}}</a></p>
+                </div>
+              </div>
+            {% endfor %}
         </div>
+        <!-- 页码 -->
+       <!--  <center>
+            <div class="clearfix">
+                <a class="btn btn-primary float-left" href="{{page.previous.url}}">上一页：{{page.prevous.title}}</a>
+                <a class="btn btn-primary float-right" href="{{page.next.url}}">下一页：{{page.next.title}}</a>
+            </div>
+        </center> -->
       </div>
     </section>
-    <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+    <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="个人博客">个人博客</a></div>
     <!--   *** SERVICES ***-->
     <section class="background-gray-lightest">
       <div class="container clearfix">

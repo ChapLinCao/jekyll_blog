@@ -1,13 +1,22 @@
 ---
+layout: demo
 title: Rit eget tincidunt condimentum
 subheading: ellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-text: 详细了解    
+text: 详细了解
+pic: blog2.jpg
 ---
 <div class="col-sm-4">
 	<div class="post">
-		<div class="image"><a href="text.html"><img src="img/blog1.jpg" alt="" class="img-responsive"></a></div>
+		<div class="image"><a href="text.html"><img src="{{site.baseUrl}}img/{{page.pic}}" alt="" class="img-responsive"></a></div>
 		<h3><a href="text.html">{{page.title}}</a></h3>
 		<p class="post__intro">{{page.subheading}}</p>
 		<p class="read-more"><a href="text.html" class="btn btn-ghost">{{page.text}}</a></p>
 	</div>
-  </div>
+</div>
+<!-- 页码 -->
+ <center>
+    <div class="clearfix">
+        <a class="btn btn-primary float-left" href="{{page.previous.url}}">上一页：{{page.prevous.title}}</a>
+        <a class="btn btn-primary float-right" href="{{page.next.url}}">下一页：{{page.next.title}}</a>
+    </div>
+</center>
