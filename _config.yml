@@ -1,4 +1,4 @@
-baseUrl: /
+baseUrl: /jekyll_blog/
 
 paginate: 3
 plugins: [jekyll-paginate]
