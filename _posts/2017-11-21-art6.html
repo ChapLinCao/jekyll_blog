@@ -18,10 +18,10 @@ pic: blog2.jpg
  <center>
     <div class="clearfix">
         {% if page.previous %}
-        <a class="btn btn-primary float-left" href="{{page.previous.url}}">上一页：{{page.previous.title}}</a>
+        <a class="btn btn-primary float-left" href="{{site.baseUrl}}{{page.previous.url}}">上一页：{{page.previous.title}}</a>
 		{% endif %}
         {% if page.next %}
-        <a class="btn btn-primary float-right" href="{{page.next.url}}">下一页：{{page.next.title}}</a>
+        <a class="btn btn-primary float-right" href="{{site.baseUrl}}{{page.next.url}}">下一页：{{page.next.title}}</a>
         {% endif %}
     </div>
 </center>
