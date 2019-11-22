@@ -75,17 +75,17 @@ layout: base
           <div class="col-sm-6">
             <div class="post">
               <div class="image"><a href="text.html"><img src="img/blog4.jpg" alt="" class="img-responsive"></a></div>
-              <h3><a href="text.html">秋山</a></h3>
+              <h3><a href="{{site.baseUrl}}text.html">秋山</a></h3>
               <p class="post__intro">秋山原生态自然风景区位于河北省灵寿县境内，东临燕川水库，西临藤龙山景区，北连横山湖旅游度假区，南望下观水库，距省会石家庄60公里，距灵寿县城30公里，南距平山县城30公里，西距革命胜地西柏坡35公里。</p>
               <p class="read-more"><a href="text.html" class="btn btn-ghost">详细了解   </a></p>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="post">
-              <div class="image"><a href="text.html"><img src="img/blog5.jpg" alt="" class="img-responsive"></a></div>
+              <div class="image"><a href="text.html"><img src="{{site.baseUrl}}img/blog5.jpg" alt="" class="img-responsive"></a></div>
               <h3><a href="text.html">冬山</a></h3>
               <p class="post__intro">  冬冷山静，鸟稀林荒。薄薄的阳光铺过谷地，一直铺到了远处那片环山的河面。看着冬山的模样，恐怕远了我的情怀，恐怕也凉了你的思念。突然有一只叫不上名字的鸟儿，扑棱一声从枝上飞起，迅速划破潮湿的空气，清清亮亮地离开了我的视线</p>
-              <p class="read-more"><a href="text.html" class="btn btn-ghost">详细了解   </a></p>
+              <p class="read-more"><a href="{{site.baseUrl}}text.html" class="btn btn-ghost">详细了解   </a></p>
             </div>
           </div>
         </div>
@@ -101,13 +101,6 @@ layout: base
               </div>
             {% endfor %}
         </div>
-        <!-- 页码 -->
-       <!--  <center>
-            <div class="clearfix">
-                <a class="btn btn-primary float-left" href="{{page.previous.url}}">上一页：{{page.prevous.title}}</a>
-                <a class="btn btn-primary float-right" href="{{page.next.url}}">下一页：{{page.next.title}}</a>
-            </div>
-        </center> -->
       </div>
     </section>
     <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="个人博客">个人博客</a></div>
