@@ -90,13 +90,13 @@ layout: base
           </div>
         </div>
         <div class="row">
-            {% for art in paginator.posts %}
+            {% for art in site.posts %}
               <div class="col-sm-4">
                 <div class="post">
-                    <div class="image"><a href="{{site.baseUrl}}{{art.url}}"><img src="{{site.baseUrl}}img/{{art.pic}}" alt="" class="img-responsive"></a></div>
-                    <h3><a href="{{site.baseUrl}}{{art.url}}">{{art.title}}</a></h3>
+                    <div class="image"><a href="{{art.url}}"><img src="img/{{art.pic}}" alt="" class="img-responsive"></a></div>
+                    <h3><a href="{{art.url}}">{{art.title}}</a></h3>
                     <p class="post__intro">{{art.subheading}}</p>
-                    <p class="read-more"><a href="{{site.baseUrl}}{{art.url}}" class="btn btn-ghost">{{art.text}}</a></p>
+                    <p class="read-more"><a href="{{art.url}}" class="btn btn-ghost">{{art.text}}</a></p>
                 </div>
               </div>
             {% endfor %}
